@@ -47,6 +47,24 @@
       color: var(--txt);
       font-weight: 500;
       overscroll-behavior: none;
+      position: relative;
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 400px;
+      height: 400px;
+      background-image: url('https://i.postimg.cc/0rP7nVPV/msrtc-logo.png');
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      opacity: 0.08;
+      pointer-events: none;
+      z-index: 1;
     }
 
     input, select, textarea, button {
@@ -65,6 +83,8 @@
       margin: 0 auto;
       background: var(--white);
       box-shadow: var(--shad-lg);
+      position: relative;
+      z-index: 2;
     }
 
     /* === HEADER ≤80px === */
@@ -192,6 +212,8 @@
       -webkit-overflow-scrolling: touch;
       padding: 14px 14px 80px;
       /* 80px bottom pad clears fixed action bar */
+      position: relative;
+      z-index: 2;
     }
 
     /* === FIXED ACTION BAR === */
